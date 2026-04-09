@@ -44,9 +44,12 @@ export default function InquiryForm() {
   const onSubmit = async (data: InquiryFormData) => {
     setSubmitError("");
     try {
-      const res = await fetch("/api/inquiry", {
+      const res = await fetch("https://formspree.io/f/xojpzerl", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify(data),
       });
       if (!res.ok) throw new Error("Submission failed");
