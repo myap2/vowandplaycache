@@ -66,6 +66,11 @@ export default function Packages() {
             Every wedding is different. Choose a starting package and customize
             it with add-ons, or request a fully custom quote.
           </p>
+
+          <div className="mt-6 inline-flex items-center gap-2 px-4 py-1.5 bg-blush-50 text-blush-700 text-sm font-medium rounded-full font-[family-name:var(--font-lato)]">
+            <Sparkles size={14} className="text-blush-500" />
+            Founding-season 2026 pricing &mdash; lock in your date early
+          </div>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-14">
