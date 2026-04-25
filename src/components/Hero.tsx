@@ -11,7 +11,7 @@ export default function Hero() {
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 text-center">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-sage-100 text-sage-700 text-sm font-medium rounded-full mb-6">
           <Heart size={14} className="text-blush-500" />
-          Cache Valley&apos;s Wedding Childcare Specialists
+          Now Booking 2026 Weddings in Cache Valley
         </div>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-sage-900 leading-tight mb-6">
@@ -41,6 +41,10 @@ export default function Hero() {
             See Our Services
           </a>
         </div>
+
+        <p className="mt-5 text-sm text-sage-500 font-[family-name:var(--font-lato)]">
+          Founding season &mdash; only a few 2026 dates remain
+        </p>
 
         {/* Trust badges */}
         <div className="mt-14 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-sm text-sage-500 font-[family-name:var(--font-lato)]">

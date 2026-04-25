@@ -1,30 +1,45 @@
-import { ShieldCheck, Eye, CalendarHeart, MessageCircleHeart } from "lucide-react";
+import {
+  ShieldCheck,
+  Eye,
+  CalendarHeart,
+  MessageCircleHeart,
+  Backpack,
+} from "lucide-react";
 
 const trustPoints = [
   {
     icon: ShieldCheck,
-    title: "Screened Caregivers",
+    title: "Screened, CPR-Ready Caregivers",
     description:
-      "Every team member goes through a thorough screening process so you can trust who's watching your little guests.",
+      "Every team member is background-checked and trained in pediatric CPR and first aid before they work an event.",
   },
   {
     icon: Eye,
-    title: "Active Supervision",
+    title: "Low Caregiver Ratios",
     description:
-      "We maintain appropriate caregiver-to-child ratios and keep eyes on every child at all times. Safety is never compromised.",
+      "We staff at least 1 caregiver for every 5 children, and tighten the ratio to 1:3 for kids under 3 so every child stays in sight.",
   },
   {
     icon: CalendarHeart,
     title: "Planned Around Your Event",
     description:
-      "We coordinate with your timeline, venue, and guest count to create a childcare plan that fits your day perfectly.",
+      "We walk the venue ahead of time, coordinate with your planner, and build a timeline that matches ceremony, dinner, and dance flow.",
   },
   {
     icon: MessageCircleHeart,
     title: "Open Communication",
     description:
-      "Parents can check in anytime. We keep the line open so everyone feels comfortable throughout the celebration.",
+      "Parents get a text-friendly point of contact for the day and a sign-in/sign-out sheet so it's always clear who's with whom.",
   },
+];
+
+const kit = [
+  "Sanitized age-appropriate toys",
+  "Crafts, coloring, and quiet-time supplies",
+  "First aid kit & basic allergy-safe snacks",
+  "Floor mats, soft seating, and changing supplies",
+  "Tablet + family-friendly movies for wind-down",
+  "Backup activities for indoor or outdoor venues",
 ];
 
 export default function TrustSafety() {
@@ -63,6 +78,30 @@ export default function TrustSafety() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-14 max-w-4xl mx-auto rounded-2xl bg-sage-50/60 border border-sage-100 p-8">
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <Backpack size={20} className="text-sage-600" />
+            <h3 className="text-lg font-bold text-sage-900">
+              What We Bring on the Day
+            </h3>
+          </div>
+          <p className="text-center text-sm text-sage-600 mb-6 font-[family-name:var(--font-lato)]">
+            Every booking arrives fully stocked. You don&apos;t need to provide
+            anything beyond a space to set up.
+          </p>
+          <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3 font-[family-name:var(--font-lato)]">
+            {kit.map((item) => (
+              <li
+                key={item}
+                className="flex items-start gap-2 text-sm text-sage-700"
+              >
+                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blush-400 shrink-0" />
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div className="mt-10 text-center">

@@ -4,18 +4,33 @@ const steps = [
     title: "Tell Us About Your Day",
     description:
       "Fill out our quick inquiry form with your wedding date, venue, and number of kids. We'll get back to you within 24 hours.",
+    details: [
+      "Share ages, headcount, and venue layout",
+      "Get a written quote within one business day",
+      "No commitment until you sign off",
+    ],
   },
   {
     number: "02",
     title: "We Plan the Perfect Setup",
     description:
       "We'll work with you to choose the right package, activities, and add-ons. We customize everything to your venue and event style.",
+    details: [
+      "Free 20-minute planning call",
+      "We coordinate directly with your venue and planner",
+      "Allergy, nap, and special-need accommodations",
+    ],
   },
   {
     number: "03",
     title: "We Show Up & Handle It All",
     description:
       "On your wedding day, our team arrives early to set up the kids area. Parents drop off, we take care of the rest — you celebrate.",
+    details: [
+      "Arrive 60 minutes before guests for setup",
+      "Sign-in/sign-out so every parent knows who has their child",
+      "Tear-down and clean-up included",
+    ],
   },
 ];
 
@@ -51,9 +66,20 @@ export default function HowItWorks() {
               <h3 className="text-lg font-bold text-sage-900 mb-2">
                 {step.title}
               </h3>
-              <p className="text-sage-600 text-sm font-[family-name:var(--font-lato)]">
+              <p className="text-sage-600 text-sm mb-4 font-[family-name:var(--font-lato)]">
                 {step.description}
               </p>
+              <ul className="space-y-2 text-left max-w-xs mx-auto font-[family-name:var(--font-lato)]">
+                {step.details.map((detail) => (
+                  <li
+                    key={detail}
+                    className="flex items-start gap-2 text-sm text-sage-600"
+                  >
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blush-400 shrink-0" />
+                    {detail}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
